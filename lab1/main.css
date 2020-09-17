@@ -60,3 +60,13 @@ body {
     flex: 1 1;
     background-color: #F6C7CB;
 }
+
+@media screen and (max-device-width: 480px) {
+    body {  
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
