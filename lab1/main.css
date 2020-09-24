@@ -9,12 +9,6 @@ body {
     flex: 1 1;
 }
 
-* { /* fix size with padding */
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
 .pad {
     padding: 10px;
 }
