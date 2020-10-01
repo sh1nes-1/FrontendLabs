@@ -1,0 +1,10 @@
+.todoItem {
+    margin: 5px;
+    background-color: #ECEFF1;
+    border: 1px solid #78909C;    
+    padding: 10px;
+}
+
+.removeBtn {
+    float: right;
+}
