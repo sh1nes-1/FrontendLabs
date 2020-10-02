@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TodoForm from '../todoform/TodoForm';
 import TodoList from '../todolist/TodoList';
 import './TodoApp.css';
 
@@ -18,10 +19,18 @@ function TodoApp() {
     setTaskList(taskList => taskList.filter(item => item !== task));
   }
 
+  const onFormSubmit = (text, datetime) => {
+    
+  }
+
   return (
     <div className="app">
       <div className="todoContainer">
-        <TodoList taskList={taskList} onRemoveTask={onRemoveTask}/>
+        <TodoList 
+          taskList={taskList} 
+          onRemoveTask={onRemoveTask}/>
+
+        <TodoForm onFormSubmit={onFormSubmit} />
       </div>
     </div>
   );
