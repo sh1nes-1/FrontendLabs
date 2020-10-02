@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './TodoForm.css';
 
 function TodoForm(props) {
+  const isoNow = new Date().toISOString();
+
   const [ text, setText ] = useState('');
-  const [ datetime, setDatetime ] = useState('');
+  const [ datetime, setDatetime ] = useState(isoNow.substring(0, isoNow.length - 1));
 
   const onTextChange = (event) => {    
     const newValue = event.target.value;
@@ -34,7 +36,7 @@ function TodoForm(props) {
 
       <input 
         type="datetime-local"
-        value={datetime}        
+        value={datetime}
         onChange={onDateTimeChange}
         className="dateInput" 
         required={true}
