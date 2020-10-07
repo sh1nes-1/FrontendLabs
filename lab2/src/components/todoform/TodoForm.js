@@ -6,6 +6,10 @@ function TodoForm(props) {
 
   const [ text, setText ] = useState('');
   const [ datetime, setDatetime ] = useState(isoNow.substring(0, isoNow.length - 1));
+  
+  const isDataValid = () => {
+    return text.length > 3 && datetime.length > 0;
+  }
 
   const onTextChange = (event) => {    
     const newValue = event.target.value;
@@ -46,6 +50,7 @@ function TodoForm(props) {
         type="submit"
         value="Додати запис"
         className="submitBtn"
+        disabled={!isDataValid()}
         />
     </form>
   );

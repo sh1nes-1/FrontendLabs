@@ -9,8 +9,12 @@ function TodoItem(props) {
 
   return (
     <div className="todoItem">
-      <span>Task: {props.text}, Date: {dueDate.toLocaleDateString()} {dueDate.toLocaleTimeString()}, Days left: {daysLeft > 0 ? daysLeft : 0}</span>
-      <input type="button" className="removeBtn" value="x" onClick={props.onRemoveClick}></input>
+      <div className="todoInfo">
+        <span className="todoName">{props.text}</span>
+        <span className="dueDate">{dueDate.toLocaleDateString()} {dueDate.toLocaleTimeString()}</span>
+        <span className="daysLeft">{daysLeft > 0 ? daysLeft : 0}</span>
+      </div>
+      <input type="button" className="removeBtn" value="×" onClick={props.onRemoveClick}></input>
     </div>
   );
 }
